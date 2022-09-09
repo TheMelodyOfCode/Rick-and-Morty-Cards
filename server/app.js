@@ -12,9 +12,14 @@ import {server, port} from "./startScript";
 import {hardCodedRoutes} from "./routes/hardCodedRoutes.js";
 import {dbRoutes} from "./routes/dbRoutes.js"
 
+var cors = require('cors');
+
 // use route imports with prefix
 server.use("/hardcoded", hardCodedRoutes);
 server.use("/dynamic", dbRoutes);
+server.use(cors(
+    {origin: '*'}
+));
 
 
 // Redirects for route from REACT
@@ -22,9 +27,15 @@ server.get("/usersHC", (req, res)=>{
         res.redirect("/hardcoded/userInfo");
 });
 server.get("/allDBUsers", (req, res)=>{
-        res.redirect("/dynamic/allUsers");
+        res.redirect("/dynamic/allUsers")
 });
 
+
+// .set({
+//     "Content-Type": "application/json",
+//     "Access-Control-Allow-Origin": "*",
+//     "Access-Control-Allow-Credentials" : true
+// });
 
 // import {db} from "./database/dbConnection.js";
 

@@ -19,8 +19,13 @@ dbRoutes.get("/allUsers", (req, res)=>{
     db.query(
        'SELECT * FROM `users`',
        function(err, results, fields) {
-        //    res.status(200).json({users: results})
-           res.status(200).json(results)
+
+        res.status(200).json(results);
+        //    res.set({
+        //     "Content-Type": "application/json",
+        //     "Access-Control-Allow-Origin": "*",
+        //     "Access-Control-Allow-Credentials" : true
+        // }).json(results)
         //   console.log(results); 
         }  
   )     
