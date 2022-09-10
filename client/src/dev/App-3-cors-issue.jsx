@@ -68,14 +68,12 @@ class App extends Component {
   console.log(this.state.users);
     }
 
-
   render() {
     console.log('NO:2 - render()');
    //filter creates a new array - the old array is untouched
     const filteredUsers = this.state.users.filter((users)=>{
       return users.username.toLocaleLowerCase().includes(this.state.searchField);
     });
-
 
 
     return (

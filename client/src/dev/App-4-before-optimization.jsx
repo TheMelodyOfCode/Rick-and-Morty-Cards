@@ -30,8 +30,6 @@ class App extends Component {
       console.log('NO:1 - constructor()')
     }
     
-
-
     componentDidMount(){
       console.log('NO:3 - componendDidMount()')
 

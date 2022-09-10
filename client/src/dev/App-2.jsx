@@ -19,18 +19,11 @@ class App extends Component {
 
       // when do i get the list, how do i get the list , where do i put the list
       this.state = {      
-        users: [ ]
-        /* best practise:
-        if you're going to modify any kind of data inside of your state, as example, filtering it out 
-        based on userinput or whatever. if you gonna go back to it and most of the time you want that.
-         at least keep some referenz to that original list */
-
+        users: []
       }
       console.log('NO:1 - constructor()')
     }
     
-
-
     componentDidMount(){
       console.log('NO:3 - componendDidMount()')
       // fetch('https://jsonplaceholder.typicode.com/users')
