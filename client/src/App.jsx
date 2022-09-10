@@ -1,7 +1,6 @@
 
 /* This is needed to be able to use the functionality of classes in REACT */
 import { Component } from "react";
-// import { useEffect, useState } from "react";
 import React from "react";
 
 import './App.css';
@@ -10,20 +9,22 @@ import './App.css';
 class App extends Component {
 
     constructor(props) {
-      // super calls the constructor of any other class this calls extends from
+// super calls the constructor of any other class this calls extends from
       super(props);
-      /* The way that REACT detects that there is a change, is that it uses 
-      JavaScripts underlying reference by memory for an object.
-      The object in memory has to be a completely different one otherwise React
-      will not change it. to change that react has the method setState */
+/* The way that REACT detects that there is a change, is that it uses 
+JavaScripts underlying reference by memory for an object.
+The object in memory has to be a completely different one otherwise React
+will not change it. to change that react has the method setState */
 
-      // when do i get the list, how do i get the list , where do i put the list
+// when do i get the list, how do i get the list , where do i put the list
       this.state = {      
         users: [ ],
-        /* best practise:
-        if you're going to modify any kind of data inside of your state, as example, filtering it out 
-        based on userinput or whatever. if you gonna go back to it and most of the time you want that.
-         at least keep some referenz to that original list */
+/* best practise:
+if you're going to modify any kind of data inside of your state, as example, filtering it out 
+based on userinput or whatever. if you gonna go back to it and most of the time you want that.
+  at least keep some referenz to that original list */
+/* we store the searchField value in our state so that we have access to it,
+in the whole component */
         searchField: ''
       }
       console.log('NO:1 - constructor()')
@@ -35,46 +36,48 @@ class App extends Component {
       console.log('NO:3 - componendDidMount()')
 
       // fetch('https://jsonplaceholder.typicode.com/users')
-      fetch('http://localhost:3001/allDBUsers', 
-      // {
-      //   method: 'GET', // *GET, POST, PUT, DELETE, etc.
-      //   mode: 'cors', // no-cors, *cors, same-origin
-      //   // // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      //   // credentials: 'include', // include, *same-origin, omit
-      //   header: {
-      //     'Content-Type': 'application/json',
-      //     "Access-Control-Allow-Origin" : "*", 
-      //     // "Access-Control-Allow-Credentials" : true
-      //     // 'Content-Type': 'application/x-www-form-urlencoded',
-      //   },
-      //   // redirect: 'follow', // manual, *follow, error
-      //   // // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-      // }
-      )
+      fetch('http://localhost:3001/allDBUsers')
       .then((response)=> {
-        // console.log(response);
-        return response.json();
-      })
-      .then((users=> {
-        console.log(users);
-        this.setState((probs)=>{
-              return {users: users}
-            },
-      ()=>{console.log(this.setState)}
-      )
+            // console.log(response);
+            return response.json();
+          })
+          .then((users=> {
+            // console.log(users);
+            this.setState((probs)=>{
+                  return {users: users}
+                },
+          ()=>{console.log(this.setState)}
+          )
 
       }
 ));
-  console.log(this.state.users);
     }
+/* this was an anonymous function before running in render, 
+changed that for optimization, so it don't get run everytime react updates the DOM */
+      onSearchChange = (event)=>{
+        console.log(event.target.value);
+        const searchField = event.target.value.toLocaleLowerCase();
 
+        this.setState(()=>{
+          return { searchField}
+        })
+      }
 
-  render() {
-    console.log('NO:2 - render()');
-   //filter creates a new array - the old array is untouched
-    const filteredUsers = this.state.users.filter((users)=>{
-      return users.username.toLocaleLowerCase().includes(this.state.searchField);
-    });
+/* everytime react needs to update the DOM , it runs the render method.
+It is best practise to try to avoid anonymous functions, since they run (get initialized) everytime,
+instead of when called */
+      render() {
+        console.log('NO:2 - render()');
+
+/* instead of calling THIS everywhere & this.state for users and searchField
+we can use destructuring in ES6. It make variables look shorter and the code easier to read. */
+        const  { users, searchField} = this.state;
+        const {onSearchChange} = this;
+
+//filter creates a new array - the old array is untouched
+        const filteredUsers = users.filter((users)=>{
+          return users.username.toLocaleLowerCase().includes(searchField);
+        });
 
 
 
@@ -83,15 +86,7 @@ class App extends Component {
               <input  className="search-box" 
                       type='search' 
                       placeholder="Search Users" 
-                      onChange={(event)=>{
-                    console.log(event.target.value);
-                    const searchField = event.target.value.toLocaleLowerCase();
-  
-
-                    this.setState(()=>{
-                      return { searchField}
-                    })
-              }} 
+                      onChange={ onSearchChange } 
               />
               {filteredUsers.map((user) => {
                 return (
