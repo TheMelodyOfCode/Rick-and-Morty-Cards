@@ -2,7 +2,7 @@
 /* This is needed to be able to use the functionality of classes in REACT */
 import { Component } from "react";
 import React from "react";
-
+import CardList from './components/card-list/card-list.component.jsx'
 import './App.css';
 
 
@@ -88,7 +88,7 @@ we can use destructuring in ES6. It make variables look shorter and the code eas
                       placeholder="Search Users" 
                       onChange={ onSearchChange } 
               />
-              {filteredUsers.map((user) => {
+              {/* {filteredUsers.map((user) => {
                 return (
                   <div key={user.userid}>  
                       <img className="image" src={`./img/${user.photo}`}  alt={user.username} />
@@ -96,8 +96,10 @@ we can use destructuring in ES6. It make variables look shorter and the code eas
                           <div>{user.bio} </div>
                       </div>
                 )
-              })}
-    
+              })} */}
+
+              {/* Components need to be CAPITALIZED */}
+              <CardList users={filteredUsers}/>
         </div>
         );
   }
