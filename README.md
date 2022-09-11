@@ -34,15 +34,18 @@ Normally the pw and username would NOT be in plain text but since it's a local i
 
 
 **Node.js**
+
 You will need a Node.js installation 
 I'm using version 16.17.0 LTS
 check out the package.json file for all the dependencies needed for this project.
+
 The webserver is used on localhost:3001 and added as a proxy to REACT
 start the webserver first
 npm start
 
 
 **REACT**
-localhost:3001 
+
+localhost:3000
 npm start
 
