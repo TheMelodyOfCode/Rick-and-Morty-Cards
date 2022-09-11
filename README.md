@@ -41,11 +41,13 @@ check out the package.json file for all the dependencies needed for this project
 
 The webserver is used on localhost:3001 and added as a proxy to REACT
 start the webserver first
+
 npm start
 
 
 **REACT**
 
 localhost:3000
+
 npm start
 
