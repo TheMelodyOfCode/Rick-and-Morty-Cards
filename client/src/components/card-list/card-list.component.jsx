@@ -30,10 +30,6 @@ class CardList extends Component {
                  <Card users={user} /> 
                 )
               })}
- 
-                         {/* <Card users={user} /> */}
-    
-
             </div>
         )
     }

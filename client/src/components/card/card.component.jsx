@@ -4,6 +4,7 @@ import './card.styles.css';
 
 class Card  extends Component {
     render() {
+        /* destructering and passing variables through props */
         const { username, bio, photo, userid } = this.props.users;
         return (
 
@@ -13,8 +14,6 @@ class Card  extends Component {
                 <div>{bio} </div>
 
         </div>
-
-
 
         )
     }

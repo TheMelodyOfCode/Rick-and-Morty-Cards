@@ -5,7 +5,6 @@ to write import here is just to have an overview where the file lives for the de
 to isolate css in we need to learn css in js libraries */
 import './search-box.styles.css';
 
-
 class SearchBox extends Component {
 
     render () {

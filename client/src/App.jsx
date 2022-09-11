@@ -82,7 +82,6 @@ we can use destructuring in ES6. It make variables look shorter and the code eas
         });
 
 
-
     return (
           <div className="App">
            <h1 className='app-title'>Rick and Morty </h1>
@@ -91,23 +90,6 @@ we can use destructuring in ES6. It make variables look shorter and the code eas
                         onChangeHandler={onSearchChange} 
                         placeholder='Search Users' />
 
-
-              {/* <input  className="search-box" 
-                      type='search' 
-                      placeholder="Search Users" 
-                      onChange={ onSearchChange } 
-              /> */}
-              {/* {filteredUsers.map((user) => {
-                return (
-                  <div key={user.userid}>  
-                      <img className="image" src={`./img/${user.photo}`}  alt={user.username} />
-                          <div>{user.username} </div>
-                          <div>{user.bio} </div>
-                      </div>
-                )
-              })} */}
-
-              {/* Components need to be CAPITALIZED */}
               <CardList users={filteredUsers}/>
         </div>
         );
