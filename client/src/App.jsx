@@ -85,11 +85,12 @@ we can use destructuring in ES6. It make variables look shorter and the code eas
 
     return (
           <div className="App">
-
+           <h1 className='app-title'>Rick and Morty </h1>
             <SearchBox  
                         className='users-search-box'
                         onChangeHandler={onSearchChange} 
                         placeholder='Search Users' />
+
 
               {/* <input  className="search-box" 
                       type='search' 

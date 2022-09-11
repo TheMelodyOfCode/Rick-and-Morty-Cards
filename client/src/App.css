@@ -16,8 +16,11 @@ body {
 
 
 .app-title {
-  margin-top: 75px;
-  margin-bottom: 50px;
-  font-size: 76px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 4rem;
   color: #0ccac4;
+  text-align: center;
+  width: 100%;
+  height: auto;
 }
