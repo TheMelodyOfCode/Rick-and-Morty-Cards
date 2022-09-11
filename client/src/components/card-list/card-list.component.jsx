@@ -1,6 +1,6 @@
 
 import { Component } from "react";
-// import Card from "../card/card.component";
+import Card from "../card/card.component";
 
 
 import './card-list.style.css';
@@ -26,15 +26,12 @@ class CardList extends Component {
 
     {users.map((user) => {
                 return (
-                  <div key={user.userid}>  
-                      <img className="image" src={`./img/${user.photo}`}  alt={user.username} />
-                          <div>{user.username} </div>
-                          <div>{user.bio} </div>
-                      </div>
+
+                 <Card users={user} /> 
                 )
               })}
  
-                         {/* <Card monster={monster} /> */}
+                         {/* <Card users={user} /> */}
     
 
             </div>
