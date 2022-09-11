@@ -15,7 +15,7 @@ and fetch data from that db, instead of fetching data from a simple url.
 
 In order to check this project out you need to do the following:
 
-** Database**
+**Database**
 I'm using  a MySQL DB with XAMPP.
 Just install XAMPP.
 To import all the userinformation etc check ou the file in:
@@ -30,7 +30,7 @@ After you've done that, go and find the folder server/database and then the file
 Here you need to put the name of the DB and your DB username and password into the function conToMySQL1.
 Normally the pw and username would NOT be in plain text but since it's a local installation for testing that's no problem.
 
-** Node.js **
+**Node.js **
 You will need a Node.js installation 
 I'm using version 16.17.0 LTS
 check out the package.json file for all the dependencies needed for this project.
@@ -38,7 +38,7 @@ The webserver is used on localhost:3001 and added as a proxy to REACT
 start the webserver first
 npm start
 
-** REACT **
+**REACT **
 localhost:3001 
 npm start
 
