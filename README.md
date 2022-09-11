@@ -23,14 +23,17 @@ server/database/MySQL-dbTable-Users-to-import/crudapp.sql
 This file contains all the necessary tables I created for this project.
 Don't forget to create a normal DB user with limited access to the db, so you won't need to use root.
 
+
 After the download put the project in the htdocs Folder.
 Under Windows C:\xampp\htdocs\
+
 
 After you've done that, go and find the folder server/database and then the file dbConnection.js
 Here you need to put the name of the DB and your DB username and password into the function conToMySQL1.
 Normally the pw and username would NOT be in plain text but since it's a local installation for testing that's no problem.
 
-**Node.js **
+
+**Node.js**
 You will need a Node.js installation 
 I'm using version 16.17.0 LTS
 check out the package.json file for all the dependencies needed for this project.
@@ -38,7 +41,8 @@ The webserver is used on localhost:3001 and added as a proxy to REACT
 start the webserver first
 npm start
 
-**REACT **
+
+**REACT**
 localhost:3001 
 npm start
 
