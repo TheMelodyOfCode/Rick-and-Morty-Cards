@@ -3,6 +3,7 @@
 import { Component } from "react";
 import React from "react";
 import CardList from './components/card-list/card-list.component.jsx'
+import SearchBox from "./components/search-box/search-box.component.jsx";
 import './App.css';
 
 
@@ -43,6 +44,7 @@ in the whole component */
           })
           .then((users=> {
             // console.log(users);
+            /* when setState get's called , render gets called again veverytime! */
             this.setState((probs)=>{
                   return {users: users}
                 },
@@ -57,7 +59,7 @@ changed that for optimization, so it don't get run everytime react updates the D
       onSearchChange = (event)=>{
         console.log(event.target.value);
         const searchField = event.target.value.toLocaleLowerCase();
-
+   /* when setState get's called , render gets called again veverytime! */
         this.setState(()=>{
           return { searchField}
         })
@@ -83,11 +85,17 @@ we can use destructuring in ES6. It make variables look shorter and the code eas
 
     return (
           <div className="App">
-              <input  className="search-box" 
+
+            <SearchBox  
+                        className='users-search-box'
+                        onChangeHandler={onSearchChange} 
+                        placeholder='Search Users' />
+
+              {/* <input  className="search-box" 
                       type='search' 
                       placeholder="Search Users" 
                       onChange={ onSearchChange } 
-              />
+              /> */}
               {/* {filteredUsers.map((user) => {
                 return (
                   <div key={user.userid}>  
