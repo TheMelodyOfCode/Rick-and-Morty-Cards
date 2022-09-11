@@ -1,9 +1,28 @@
-.card-list {
+/* .card-list {
     width: 85vw;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
+  } */
+
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: space-between; */
+    align-content: center;
+    overflow: scroll;
+    width: 85vw;
+    margin: 0 auto;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px; */
   }
+  .card-list > div {
 
-
+    width: 18rem;
+    margin: 0.625rem;
+    text-align: center;
+    align-content: center;
+    flex-grow: 4;
+  }
