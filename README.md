@@ -1,5 +1,5 @@
 # Rick-and-Morty-Cards
-**REACT Node.js &amp; MySQL - Project**
+**REACT -- Node.js &amp; MySQL - Project**
 
 I'm still new to REACT and therefore I'm using class components.
 This is a basic beginner project to learn more about REACT.
