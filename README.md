@@ -2,13 +2,13 @@
 **REACT -- Node.js &amp; MySQL - Project**
 
 
-**functionalComponents branch**
+**functionalComponents branch (in progress)**
 
 There is a second branch functionalComponents where I convert the project into functional components and work with hooks.
 Not finished yet.
 
 
-**master branch - class compontents**
+**master branch - class compontents (finished)**
 
 The project on the master branch, was made with class components and  has been finished now and is fully functional.
 
