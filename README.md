@@ -10,7 +10,7 @@ The functionalComponents branch, is as the name says, created only with function
 
 The project on the master branch, was made with class components.
 
-The main focus about, what to understand and learn form the master branch project was the following:
+The main focus about, what to understand and learn form the master branch project was:
 React Components and their lifecycle, how they render, how they rerender and the basic composition patterns one needs for REACT.
 
 Setting up a webserver and routing system with Node.js in order to create and implement a database in React 
