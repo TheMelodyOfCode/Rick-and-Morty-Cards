@@ -1,14 +1,16 @@
 # Rick-and-Morty-Cards
 **REACT -- Node.js &amp; MySQL - Project**
 
-**master branch - class compontents**
-
-The project on the master branch, was made with class components and  has been finished now and is fully functional.
 
 **functionalComponents branch**
 
 There is a second branch functionalComponents where I convert the project into functional components and work with hooks.
 Not finished yet.
+
+
+**master branch - class compontents**
+
+The project on the master branch, was made with class components and  has been finished now and is fully functional.
 
 The main focus about, what to understand and learn form the master branch project was the following:
 React Components and their lifecycle, how they render, how they rerender and the basic composition patterns one needs for REACT.
