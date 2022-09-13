@@ -2,15 +2,13 @@
 **REACT -- Node.js &amp; MySQL - Project**
 
 
-**functionalComponents branch (in progress)**
+**functionalComponents branch (tested and fully functional)**
 
-There is a second branch functionalComponents where I convert the project into functional components and work with hooks.
-Not finished yet.
+The functionalComponents branch, is as the name says, created only with functional components and hooks.
 
+**master branch - class compontents (tested and fully functional)**
 
-**master branch - class compontents (finished)**
-
-The project on the master branch, was made with class components and  has been finished now and is fully functional.
+The project on the master branch, was made with class components.
 
 The main focus about, what to understand and learn form the master branch project was the following:
 React Components and their lifecycle, how they render, how they rerender and the basic composition patterns one needs for REACT.
