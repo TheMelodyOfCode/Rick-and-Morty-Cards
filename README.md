@@ -1,11 +1,15 @@
 # Rick-and-Morty-Cards
 **REACT -- Node.js &amp; MySQL - Project**
 
-I'm still new to REACT and therefore I'm using class components.
-This is a basic beginner project to learn more about REACT.
-The main focus about, what to understand and learn form this project was the following:
+**master branch - class compontents**
 
-React Components, how they render, how they rerender and the basic composition patterns one needs for REACT.
+The project on the master branch, was made with class components and  has been finished now and is fully functional.
+
+**functionalComponents branch**
+There is a second branch functionalComponents where I convert the project in functional component and work with hooks.
+
+The main focus about, what to understand and learn form the master branch project was the following:
+React Components and their lifecycle, how they render, how they rerender and the basic composition patterns one needs for REACT.
 
 Setting up a webserver and routing system with Node.js in order to create and implement a database in React 
 and fetch data from that db, instead of fetching data from a simple url.
